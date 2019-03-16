@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header';
+import { Switch, Route } from 'react-router-dom';
+import Search from './views/search';
+import Upload from './views/upload';
+import Scene from './views/scene';
+import Tilt from './views/tilt';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Switch>
+          <Route exact path='/' render={() =>
+          <Search />} />
+          <Route exact path='/upload' render={() =>
+          <Upload />} />
+          <Route exact path='/scene' render={() =>
+          <Scene />} />
+          <Route exact path='/tilt' render={() =>
+          <Tilt />} />
+        </Switch>
       </div>
     );
   }
