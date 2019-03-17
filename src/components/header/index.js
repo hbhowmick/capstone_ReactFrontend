@@ -14,8 +14,6 @@ class Header extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-
-
               <li className="nav-item">
                 <NavLink className="nav-link" to='/upload'>Upload</NavLink>
               </li>
@@ -25,8 +23,6 @@ class Header extends Component {
               <li className="nav-item">
                 <NavLink className="nav-link" to='/tilt'>Tilted Scene</NavLink>
               </li>
-
-
             </ul>
           </div>
         </nav>
